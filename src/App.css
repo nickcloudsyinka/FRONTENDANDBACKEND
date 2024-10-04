@@ -6,3 +6,23 @@
 h1 {
   font-size: 50px;
 }
+.bg {
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  font-size: 17px;
+}
+input {
+  width: 15%;
+  padding: 8px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 15%;
+}

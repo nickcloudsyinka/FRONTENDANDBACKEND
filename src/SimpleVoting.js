@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Web3 from 'web3';
 import SimpleVotingABI from './SimpleVotingABI.json';
+import './App.css';
 
 const contractABI = SimpleVotingABI;
 const contractAddress = "0x048DC24fD4841B471aFfD490287F088BEe26219e";
@@ -176,20 +177,20 @@ function SimpleVoting() {
     };
 
     return (
-        <div>
-            <h1>Simple Voting DApp</h1>
+        <div className='bg'>
+            <h1>Children Voting DApp</h1>
             <p>Connected Account: {account}</p>
 
-            <h2>Add Proposal</h2>
+            <h2>Add Children Name</h2>
             <input 
                 type="text" 
-                placeholder="Proposal Name" 
+                placeholder="Children Name" 
                 value={proposalName} 
                 onChange={(e) => setProposalName(e.target.value)} 
             />
-            <button onClick={handleAddProposal}>Add Proposal</button>
+            <button onClick={handleAddProposal}>Add Children Name</button>
 
-            <h2>Proposals</h2>
+            <h2>Children</h2>
             <ul>
                 {proposals.map((proposal) => (
                     <li key={proposal.id}>
@@ -198,10 +199,10 @@ function SimpleVoting() {
                 ))}
             </ul>
 
-            <h2>Vote</h2>
+            <h2>Pick A Vote</h2>
             <input 
                 type="number" 
-                placeholder="Proposal ID" 
+                placeholder="Children ID" 
                 value={proposalId} 
                 onChange={(e) => setProposalId(e.target.value)} 
             />
@@ -214,18 +215,18 @@ function SimpleVoting() {
                 value={votingContract} 
                 onChange={(e) => setVotingContract(e.target.value)} 
             />
-            <button onClick={handleVoteWithContract}>Vote via Contract</button>
+            <button onClick={handleVoteWithContract}>Vote via Contract Of The Children</button>
 
             <h2>Delete Vote ParticiPants</h2>
-            <button onClick={handleDeleteVote}>Delete Vote</button>
+            <button onClick={handleDeleteVote}>Delete Vote Of The Children Name</button>
 
             <h2>Add More Votes</h2>
-            <button onClick={handleAddMoreVotes}>Add More Votes</button>
+            <button onClick={handleAddMoreVotes}>Add More Votes To One Off The Children</button>
 
-            <h2>Total Votes For A ParticiPants</h2>
-            <button onClick={handleGetTotalVotes}>Get Total Votes</button>
+            <h2>Total Votes For A Children</h2>
+            <button onClick={handleGetTotalVotes}>Get Total Votes Off The Children</button>
 
-            <h2>Remove Vote</h2>
+            <h2>Remove Vote of The Children</h2>
             <button onClick={handleRemoveVote}>Remove Vote</button>
 
             {successMessage && <p>{successMessage}</p>}
